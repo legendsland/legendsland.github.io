@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "target": "es6",
+        "module": "commonjs",
+        "allowJs": true,
+        "jsx": "react",
+        "declaration": true,
+        "noImplicitAny": true,
+        "removeComments": true,
+        "experimentalDecorators": true,
+        "rootDir": ".",
+        "outDir": "out",
+        "sourceMap": true,
+        "listFiles": true,
+        "newLine": "LF",
+        "noEmitOnError": true,
+        "resolveJsonModule": true,
+        "esModuleInterop": true
+    },
+    "include": [
+        "src/node/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ]
+}
+

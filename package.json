@@ -1,0 +1,24 @@
+{
+  "name": "legendsland.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "compile": "tsc",
+    "start": "node out/src/node/index.js"
+  },
+  "repository": "git@github.com:legendsland/legendsland.github.io.git",
+  "author": "lin <legendsland@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jquery": "^3.5.14",
+    "@types/jsdom": "^20.0.1",
+    "@types/markdown-it": "^12.2.3",
+    "@types/node": "^18.11.13",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "jquery": "^3.6.1",
+    "jsdom": "^20.0.3",
+    "markdown-it": "^13.0.1"
+  }
+}

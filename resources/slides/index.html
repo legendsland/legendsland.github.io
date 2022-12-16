@@ -1,0 +1,37 @@
+
+<html>
+<body>
+
+    <div id="placeholder">
+        <p>Loading...</p>
+    </div>
+    
+    <script src="../static/js/jquery-3.6.2.min.js"></script>
+    <script src="../static/js/crypto-js.min.js"></script>
+    <script>
+
+        function unlock() {
+          const key = $('#pwd').val();
+          const html  = CryptoJS.AES.decrypt(__data, key).toString(CryptoJS.enc.Utf8);
+          const newDoc = document.open("text/html", "replace");
+          newDoc.write(html);
+          newDoc.close();
+        }
+
+        const slide = document.location.hash.substring(1);
+        if (slide !== '') {
+            $('#placeholder').remove();
+            $('body').prepend(`
+<div>
+    <input type="password" id="pwd" name="pwd">
+    <input type="submit" value="Unlock" onclick="unlock()">
+</div>`);
+
+            $('body').append(`<script src="${slide}.js"><\/script>`);
+        }
+
+    </script>
+
+</body>
+</html>
+
